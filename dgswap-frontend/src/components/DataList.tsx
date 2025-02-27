@@ -1,7 +1,7 @@
 import React from "react";
 import { FactoryCard } from "./FactoryCard";
 import { PoolCard } from "./PoolCard";
-import { Factory, Pool } from "../../dgswapSubgraphSDK/src"; 
+import { Factory, Pool } from "../../subgraph-dgswap/src";
 
 interface DataListProps {
   factories: Factory[];

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { sdk } from "../lib/sdk";
-import { Factory, Pool } from "../../dgswapSubgraphSDK/src";
+import { Factory, Pool } from "../../subgraph-dgswap/src";
 
 
 type DataType = "factories" | "pools";

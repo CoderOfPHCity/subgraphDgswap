@@ -1,5 +1,5 @@
 import React from "react";
-import { Pool } from "../../dgswapSubgraphSDK/src"; // Adjust import
+import { Pool } from "../../subgraph-dgswap/src";
 
 interface PoolCardProps {
   pool: Pool;
