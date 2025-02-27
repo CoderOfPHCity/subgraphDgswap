@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
   const [limit, setLimit] = useState<number>(5);
   const { factories, loading, error } = useSubgraphData("factories", limit);
 
-  // // Aggregate stats
+  // // Aggregate stats.
   // const totalVolumeUSD = factories.reduce((sum, f) => sum + Number(f.totalVolumeUSD), 0);
   // const totalPools = factories.reduce((sum, f) => sum + Number(f.poolCount), 0);
   // const totalTxs = factories.reduce((sum, f) => sum + Number(f.txCount), 0);
