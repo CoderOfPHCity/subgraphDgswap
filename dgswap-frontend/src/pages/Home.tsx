@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { DataList } from "../components/DataList";
 import { Header } from "../components/Header";
-import { ArrowTrendingUpIcon, ChartBarIcon, CubeIcon } from "@heroicons/react/24/outline";
+// import { ArrowTrendingUpIcon, ChartBarIcon, CubeIcon } from "@heroicons/react/24/outline";
 import { useSubgraphData } from "../hooks/useSubgraphData";
-import { formatUSD } from "../utils/format";
+// import { formatUSD } from "../utils/format";
 
 export const Home: React.FC = () => {
   const [limit, setLimit] = useState<number>(5);
   const { factories, loading, error } = useSubgraphData("factories", limit);
 
-  // Aggregate stats
-  const totalVolumeUSD = factories.reduce((sum, f) => sum + Number(f.totalVolumeUSD), 0);
-  const totalPools = factories.reduce((sum, f) => sum + Number(f.poolCount), 0);
-  const totalTxs = factories.reduce((sum, f) => sum + Number(f.txCount), 0);
+  // // Aggregate stats
+  // const totalVolumeUSD = factories.reduce((sum, f) => sum + Number(f.totalVolumeUSD), 0);
+  // const totalPools = factories.reduce((sum, f) => sum + Number(f.poolCount), 0);
+  // const totalTxs = factories.reduce((sum, f) => sum + Number(f.txCount), 0);
 
   const handleLimitChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);
@@ -96,11 +96,3 @@ export const Home: React.FC = () => {
     </div>
   );
 };
-
-const StatCard: React.FC<{ icon: React.ReactNode; label: string; value: string }> = ({ icon, label, value }) => (
-  <div className="bg-gray-800/70 p-4 sm:p-6 rounded-lg shadow-lg border border-gray-700/50 hover:border-indigo-500 transition-all">
-    <div className="flex justify-center mb-2">{icon}</div>
-    <p className="text-xs sm:text-sm text-gray-400">{label}</p>
-    <p className="text-lg sm:text-xl lg:text-2xl font-semibold">{value}</p>
-  </div>
-);

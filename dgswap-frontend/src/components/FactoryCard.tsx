@@ -1,5 +1,5 @@
 import React from "react";
-import { Factory } from "/home/agantem/Desktop/dgswap/dgswapSubgraphSDK/src"; // Adjust import
+import { Factory } from "../../dgswapSubgraphSDK/src"; // Adjust import
 import { formatUSD } from "../utils/format";
 
 interface FactoryCardProps {
